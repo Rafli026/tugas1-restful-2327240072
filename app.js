@@ -1,11 +1,13 @@
-// Import Express
-const express = require("express");
-const cors = require("cors");
-app.use(cors());
+const express = require('express');
+const cors = require('cors');
+
+// 1. Inisialisasi app TERLEBIH DAHULU
 const app = express();
 
-// Middleware parsing JSON
+// 2. Barulah panggil middleware cors dan express.json()
+app.use(cors());
 app.use(express.json());
+
 
 // Data Awal (minimal 3 data)
 let bouquets = [
